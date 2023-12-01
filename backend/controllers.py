@@ -83,6 +83,10 @@ class EntregadorController:
         mensagem = f'Dados do Entregador {entregador_id} atualizados com sucesso.'
         self.view.mostrar_mensagem(mensagem)
 
+    def obter_e_mostrar_dados(self, entregador_id):
+        dados_entregador = self.model.obter_dados(entregador_id)
+        self.view.mostrar_dados_conta(dados_entregador)
+
 class UsuarioController:
     """ Classe responsável pelo controle do usuario """
     def __init__(self, model, view):

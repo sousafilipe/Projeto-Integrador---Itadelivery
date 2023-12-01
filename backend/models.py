@@ -200,6 +200,21 @@ class EntregadorModel:
             cursor.close()
             conn.close()
 
+    def obter_dados(self, entregador_id):
+        conn = self.conectar_banco()
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("SELECT * FROM entregadores WHERE id = %s", (entregador_id,))
+            entregador = cursor.fetchone()
+            return entregador
+        except Exception as e:
+            print(f"Erro ao obter dados do entregador: {e}")
+            return None
+        finally:
+            cursor.close()
+            conn.close()
+
 
 class UsuarioModel:
     """ Classe referente ao modelo usuario """

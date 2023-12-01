@@ -28,6 +28,16 @@ class EntregadorView:
     def mostrar_mensagem(self, mensagem):
         """ Método View do entregador para mostrar mensagem """
         print(mensagem)
+    def mostrar_dados_conta(self, dados_entregador):
+        if dados_entregador:
+            print(f'Dados do Entregador:')
+            # print(f'ID: {dados_entregador[0]}')
+            print(f'Nome: {dados_entregador[1]}')
+            print(f'CPF: {dados_entregador[2]}')
+            print(f'Telefone: {dados_entregador[3]}')
+            print(f'Gênero: {dados_entregador[4]}')
+        else:
+            print(f'Entregador não encontrado.')
 
 class UsuarioView:
     """ Classe View do usuario """
