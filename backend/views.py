@@ -6,6 +6,16 @@ class ClienteView:
     def mostrar_mensagem(self, mensagem):
         """ Método View do cliente para mostrar mensagem """
         print(mensagem)
+    def mostrar_dados_conta(self, dados_cliente):
+        if dados_cliente:
+            print(f'Dados do Cliente:')
+            # print(f'ID: {dados_cliente[0]}')
+            print(f'Nome: {dados_cliente[1]}')
+            print(f'CPF: {dados_cliente[2]}')
+            print(f'Telefone: {dados_cliente[3]}')
+            print(f'Gênero: {dados_cliente[4]}')
+        else:
+            print(f'Cliente não encontrado.')
 
 class CartaoView:
     """ Classe View do cartão """

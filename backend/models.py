@@ -135,6 +135,21 @@ class ClienteModel:
         finally:
             cursor.close()
             conn.close()
+
+    def obter_dados(self, cliente_id):
+        conn = self.conectar_banco()
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("SELECT * FROM clientes WHERE id = %s", (cliente_id,))
+            cliente = cursor.fetchone()
+            return cliente
+        except Exception as e:
+            print(f"Erro ao obter dados do cliente: {e}")
+            return None
+        finally:
+            cursor.close()
+            conn.close()
             
     def remover_cliente(self, cliente_id):
         conn = self.conectar_banco()

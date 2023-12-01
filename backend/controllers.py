@@ -60,6 +60,10 @@ class ClienteController:
         self.model.atualizar_cliente(cliente_id, novo_nome, novo_telefone)
         mensagem = f'Dados do Cliente {cliente_id} atualizados com sucesso.'
         self.view.mostrar_mensagem(mensagem)
+
+    def obter_e_mostrar_dados(self, cliente_id):
+        dados_cliente = self.model.obter_dados(cliente_id)
+        self.view.mostrar_dados_conta(dados_cliente)
     
     def remover_cliente(self, cliente_id):
         self.model.remover_cliente(cliente_id)
