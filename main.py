@@ -49,15 +49,15 @@ cliente_controller.cadastrar_cliente('Claudio', '78377232741', '99999999', 'masc
 cliente_controller.atualizar_cliente(1, 'Jeferson', '8599999999')
 
 print("Parte referente ao mostrar dados do cliente!\n")
-cliente_controller.obter_e_mostrar_dados(1)
+cliente_controller.obter_e_mostrar_dados(16)
 print('\n')
 
-cliente_controller.remover_cliente(4)
+cliente_controller.remover_cliente(6)
 
 entregador_controller.atualizar_entregador(1, 'Allan', '999999999')
 
 print("Parte referente ao mostrar dados do Entregador!\n")
-entregador_controller.obter_e_mostrar_dados(1)
+entregador_controller.obter_e_mostrar_dados(5)
 print('\n')
 
 usuario_controller.realizar_login('123456789', 'senha123')
